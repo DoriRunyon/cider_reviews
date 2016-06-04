@@ -1,0 +1,80 @@
+
+.show-rating-form:hover {
+
+    color: #428bca;
+    cursor: pointer;
+}
+
+.page-header {
+
+    font-size: 30px;
+    font-family: 'Lobster Two', cursive;
+}
+
+.glyphicon .glyphicon-star {
+
+    margin: 10px;
+}
+
+.logo {
+
+    margin: 10px;
+    font-size: 20px;
+}
+
+.new-rating-form {
+
+    background: rgb(54, 25, 25); 
+    background: rgba(54, 25, 25, .05); 
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.rating-listing {
+
+    background: rgb(54, 25, 25); 
+    background: rgba(54, 25, 25, .05); 
+    padding: 20px;
+    margin: 20px;
+    width: 1000px;
+    border-radius: 10px;
+    position: absolute;
+}
+
+.rating-detail {
+
+    background: rgb(54, 25, 25); 
+    background: rgba(54, 25, 25, .05);
+    padding: 20px;
+    margin: 10px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+.post-form p #id_beer_name {
+
+    border-radius: 5px;
+}
+
+.post-form p #id_brewer_name {
+
+    border-radius: 5px;
+}
+
+.post-form p #id_score {
+
+    border-radius: 5px;
+}
+
+.post-form p #id_notes {
+
+    border-radius: 5px;
+}
+
+.btn-default {
+
+    color: white;
+    background: #5cb85c;
+}

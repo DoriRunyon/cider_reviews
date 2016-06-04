@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="show-rating-form">
+          <h3>New Rating  <span class="glyphicon glyphicon-star"></span></h3>
+            </div>
+              <div class="new-rating-form" class="col-sm-10 col-sm-offset-1">
+                <form method="POST" class="post-form">{% csrf_token %}
+                  <p>{{ form.beer_name }}</p>
+                  <p>{{ form.brewer_name }}</p>
+                  <p>{{ form.notes }}</p>
+                  <p>Score {{ form.score }}</p>
+                  <button type="submit" class="save btn btn-default">Submit</button>
+                </form>
+              </div>
+
+
+          <div class="rating-listing" class="col-sm-10 col-sm-offset-1">
+            <h2>Cider Ratings</h2>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Cider Name</th>
+                    <th>Brewer Name</th>
+                    <th>Cider Rating</th>
+                    <th>Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for rating in ratings %}
+                    <tr>
+                      <td><a href="{% url 'rating_detail' pk=rating.pk %}">{{ rating.beer_name }}</a></td>
+                      <td>{{ rating.brewer_name }}</td>
+                      <td>{{ rating.score }}</td>
+                      <td>{{ rating.notes }}</td>
+                      <td><a href="{% url 'rating_delete' pk=rating.pk %}"><span class="glyphicon glyphicon-trash"</span></a></td>
+                    </tr>
+          {% endfor %}
+                </tbody>
+              </table>
+          </div>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

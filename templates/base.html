@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<html>
+<head>
+  <title>{% block title %}Cider Reviews{% endblock %}</title>
+ 
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,400italic' rel='stylesheet' type='text/css'>
+
+  {% block css %}
+  {% endblock %}
+
+</head>
+
+<script src="static/jquery-2.1.4.js"></script>
+
+<body>
+
+    <div class="main">  
+        <div class='page-header'>
+            <a href="{% url 'home' %}" class="logo">Cider Reviews Home</a>
+        </div>
+    </div>
+
+{% block content %}
+{% endblock %}
+
+</body>
+
+<script type="text/javascript" src="{% static "jquery.js" %}"></script>
+
+</html>

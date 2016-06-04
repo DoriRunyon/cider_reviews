@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-10 col-sm-offset-1">
+        <div class="rating-detail">
+            <h2>Edit Rating</h2>
+                <form method="POST" class="post-form">{% csrf_token %}
+                    <p>{{ form.beer_name }}</p>
+                    <p>{{ form.brewer_name }}</p>
+                    <p>{{ form.notes }}</p>
+                    <p>Score {{ form.score }}</p>
+                    <button type="submit" class="save btn btn-default">Save</button>
+                <a href="{% url 'home' %}">Cancel Edit</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
